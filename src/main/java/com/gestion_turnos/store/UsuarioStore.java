@@ -1,5 +1,6 @@
 package com.gestion_turnos.store;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -16,13 +17,13 @@ public class UsuarioStore {
 
     private UsuarioStore(PasswordEncoder encoder) {
 
-        List<String> roles = new ArrayList<>();
-        roles.add("ROLE_ADMIN");
+        List<String> rolesAdmin = new ArrayList<>();
+        rolesAdmin.add("ROLE_ADMIN");
         Usuario admin = new Usuario(contadorId++, "admin", encoder.encode("admin123"), "admin@turnos.com", rolesAdmin);
         usuarios.add(admin);
 
         List<String> rolesMedicos = new ArrayList<>();
-        roles.add("ROLE_MEDICO");
+        rolesAdmin.add("ROLE_MEDICO");
         Usuario medico = new Usuario(contadorId++, "dra_garcia", encoder.encode("medico123"), "medico@turnos.com", rolesMedicos);
         usuarios.add(medico);
     }
