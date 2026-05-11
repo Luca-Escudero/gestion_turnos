@@ -23,7 +23,7 @@ public class UsuarioStore {
         usuarios.add(admin);
 
         List<String> rolesMedicos = new ArrayList<>();
-        rolesAdmin.add("ROLE_MEDICO");
+        rolesMedicos.add("ROLE_MEDICO");
         Usuario medico = new Usuario(contadorId++, "dra_garcia", encoder.encode("medico123"), "medico@turnos.com", rolesMedicos);
         usuarios.add(medico);
     }

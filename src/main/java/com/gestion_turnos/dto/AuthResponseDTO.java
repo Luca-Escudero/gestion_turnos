@@ -4,12 +4,12 @@ public class AuthResponseDTO {
 
     private String accessToken;
     private String tokenType = "Bearer";
-    private long expieresIn;
+    private long expiresIn;
     private String username;
 
-    public AuthResponseDTO(String accessToken, long expireIn, String username){
+    public AuthResponseDTO(String accessToken, long expiresIn, String username){
         this.accessToken = accessToken;
-        this.expieresIn = expireIn;
+        this.expiresIn = expiresIn;
         this.username = username;
     }
 
@@ -21,8 +21,8 @@ public class AuthResponseDTO {
         return tokenType;
     }
 
-    public long getExpieresIn() {
-        return expieresIn;
+    public long getExpiresIn() {
+        return expiresIn;
     }
 
     public String getUsername() {
